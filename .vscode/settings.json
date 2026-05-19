@@ -1,0 +1,3 @@
+{
+  "css.styleSheets": ["./styles/main.css", "./styles/components.css"]
+}
