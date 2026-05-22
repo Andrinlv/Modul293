@@ -432,7 +432,7 @@ Modul293/
     <footer class="site-footer">
       <div class="container">
         <p class="site-footer__copy">
-          &copy; <span id="currentYear"></span> 2026 Andrin Leo Virisario / Alle
+          &copy; <span id="currentYear"></span> Andrin Leo Virisario / Alle
           Rechte vorbehalten.
         </p>
         <a
@@ -1389,3 +1389,5 @@ Original-Foto (DSLR)
 | Farb-Kontrast prüfen  | webaim.org/resources/contrastchecker |
 
 ---
+Link zu der Dokumentation Wiki:
+**[Wiki](https://github.com/Andrinlv/Modul293.wiki.git)**

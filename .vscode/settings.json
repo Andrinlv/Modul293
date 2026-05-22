@@ -1,3 +1,7 @@
 {
-  "css.styleSheets": ["./styles/main.css", "./styles/components.css"]
+  "css.styleSheets": [
+    "./styles/main.css",
+    "./styles/components.css"
+  ],
+  "liveServer.settings.port": 5501
 }
