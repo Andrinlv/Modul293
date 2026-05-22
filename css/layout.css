@@ -1,0 +1,35 @@
+/*container*/
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto; /* zentriert horizontal */
+  padding-inline: var(--space-6);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+/*sections*/
+.section {
+  padding-block: var(--space-24); /* oben + unten = 96px */
+}
+
+/* Abwechselnde Hintergründe für visuellen Rhythmus */
+.section--about,
+.section--contact {
+  background-color: var(--color-bg-alt);
+}
+
+/*section headers*/
+.section__title {
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.section__subtitle {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-12);
+}

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="de">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Andrin Leo Virisario" />
@@ -12,7 +12,6 @@
     <meta property="og:type" content="website" />
 
     <title>Andrin Leo Virisario</title>
-
     <link rel="icon" href="assets/images/icons/favicon.ico" />
 
     <link rel="stylesheet" href="css/base.css" />
@@ -22,27 +21,326 @@
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
-<body>
-    <header class="header">
-        <nav class="nav" aria-label="Hauptnavigation">
+
+  <body data-theme="light">
+
+    <header class="site-header" id="site-header">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="#hero" class="nav__logo">Menü</a>
         <ul class="nav__links" role="list">
           <li><a href="#about" class="nav__link">Über mich</a></li>
           <li><a href="#skills" class="nav__link">Skills</a></li>
           <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
           <li><a href="#contact" class="nav__link">Kontakt</a></li>
         </ul>
-        </nav>
+        <button
+          class="nav__theme-toggle"
+          aria-label="Theme wechseln"
+          id="themeToggle"
+        >
+          🌙
+        </button>
+        <button
+          class="nav__burger"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+          id="burgerBtn"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
     </header>
-    <main class="main-content">
-        <section class="section section--hero">
-            <div class="container">
-                <h1 class="hero-title">Andrin Leo Virisario</h1>
-            </div>
-        </section>
-    </main>
-    <footer class="site-footer">
+
+    <main id="main-content">
+
+      <section class="section section--hero" id="hero" aria-label="Willkommen!">
         <div class="container">
-            <p>&copy; 2026 Andrin Leo Virisario. Alle Rechte vorbehalten.</p>
+          <div class="hero__content">
+            <span class="hero__greeting reveal">Hallo, ich bin</span>
+            <h1 class="hero__title reveal reveal--delay-1">
+              Andrin Leo Virisario
+            </h1>
+            <p class="hero__subtitle reveal reveal--delay-2">
+              Was ich tue / Mein Beruf
+            </p>
+            <div class="hero__actions reveal reveal--delay-3">
+              <a href="#portfolio" class="btn btn--primary">Meine Arbeiten</a>
+              <a href="#contact" class="btn btn--outline">Kontakt aufnehmen</a>
+            </div>
+          </div>
+          <div class="hero__image reveal reveal--delay-2">
+            <img
+              src="assets/images/portrait/hero.jpg"
+              alt="Portrait von Mein Name"
+              loading="eager"
+              width="480"
+              height="560"
+            />
+          </div>
         </div>
-</body>
+        <a
+          href="#about"
+          class="hero__scroll-hint"
+          aria-label="Nach unten scrollen"
+        >
+          <span class="scroll-arrow"></span>
+        </a>
+      </section>
+
+      <section class="section section--about" id="about" aria-label="Über mich">
+        <div class="container">
+          <h2 class="section__title reveal">Über mich</h2>
+          <div class="about__grid">
+            <div class="about__image reveal">
+              <img
+                src="assets/images/portrait/about.jpg"
+                alt="Ich bei der Arbeit"
+                loading="lazy"
+                width="400"
+                height="500"
+              />
+            </div>
+            <div class="about__text reveal reveal--delay-1">
+              <p class="about__lead">Kurze, prägnante Einleitung über mich.</p>
+              <p>
+                Längerer Beschreibungstext über mich, meine Werte und was mich
+                antreibt.
+              </p>
+              <ul class="about__facts" role="list">
+                <li class="about__fact">
+                  <span class="about__fact-label">Standort</span>
+                  <span class="about__fact-value">Basel, Schweiz</span>
+                </li>
+                <li class="about__fact">
+                  <span class="about__fact-label">Verfügbar</span>
+                  <span class="about__fact-value">Ab sofort</span>
+                </li>
+              </ul>
+              <a href="#contact" class="btn btn--primary">Lass uns reden</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section section--skills"
+        id="skills"
+        aria-label="Meine Fähigkeiten"
+      >
+        <div class="container">
+          <h2 class="section__title reveal">Skills</h2>
+          <p class="section__subtitle reveal">
+            Was ich kann und womit ich arbeite
+          </p>
+          <div class="skills__grid">
+            <!-- Skill-Gruppe -->
+            <article class="skill-card reveal">
+              <div class="skill-card__icon" aria-hidden="true">⚡</div>
+              <h3 class="skill-card__title">Frontend</h3>
+              <ul class="skill-card__tags" role="list">
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">JavaScript</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal reveal--delay-1">
+              <div class="skill-card__icon" aria-hidden="true">🛠️</div>
+              <h3 class="skill-card__title">Tools</h3>
+              <ul class="skill-card__tags" role="list">
+                <li class="tag">Git</li>
+                <li class="tag">Figma</li>
+                <li class="tag">VS Code</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal reveal--delay-2">
+              <div class="skill-card__icon" aria-hidden="true">🎯</div>
+              <h3 class="skill-card__title">Soft Skills</h3>
+              <ul class="skill-card__tags" role="list">
+                <li class="tag">Kommunikation</li>
+                <li class="tag">Teamwork</li>
+                <li class="tag">Problemlösung</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section section--portfolio"
+        id="portfolio"
+        aria-label="Meine Projekte"
+      >
+        <div class="container">
+          <h2 class="section__title reveal">Portfolio</h2>
+          <p class="section__subtitle reveal">Ausgewählte Projekte</p>
+          <div class="portfolio__grid">
+            <article class="project-card reveal">
+              <div class="project-card__image">
+                <img
+                  src="assets/images/projects/project-1.jpg"
+                  alt="Projektname – Kurzbeschreibung"
+                  loading="lazy"
+                  width="600"
+                  height="400"
+                />
+                <div class="project-card__overlay">
+                  <a
+                    href="#"
+                    class="btn btn--outline btn--small"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live ansehen</a
+                  >
+                  <a
+                    href="#"
+                    class="btn btn--ghost btn--small"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Projektname</h3>
+                <p class="project-card__desc">
+                  Kurze Beschreibung was dieses Projekt tut.
+                </p>
+                <ul class="project-card__tags" role="list">
+                  <li class="tag tag--accent">HTML</li>
+                  <li class="tag tag--accent">CSS</li>
+                  <li class="tag tag--accent">JS</li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section section--contact"
+        id="contact"
+        aria-label="Kontaktformular"
+      >
+        <div class="container container--narrow">
+          <h2 class="section__title reveal">Kontakt</h2>
+          <p class="section__subtitle reveal">
+            Ich freue mich über deine Nachricht
+          </p>
+
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="name">Name *</label>
+              <input
+                class="form-input"
+                type="text"
+                id="name"
+                name="name"
+                required
+                autocomplete="name"
+                placeholder="Dein Name"
+              />
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">E-Mail *</label>
+              <input
+                class="form-input"
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+                placeholder="deine@email.ch"
+              />
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Nachricht *</label>
+              <textarea
+                class="form-input form-input--textarea"
+                id="message"
+                name="message"
+                required
+                rows="5"
+                placeholder="Was möchtest du mir mitteilen?"
+              ></textarea>
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <button
+              class="btn btn--primary btn--full"
+              type="submit"
+              id="submitBtn"
+            >
+              Nachricht senden
+            </button>
+            <p class="form-success" id="formSuccess" aria-live="polite" hidden>
+              Danke! Ich melde mich bald.
+            </p>
+          </form>
+
+          <div class="contact__links reveal">
+            <a
+              href="mailto:meine@email.ch"
+              class="contact__link"
+              aria-label="E-Mail senden"
+              >andrin@leovirisario.ch</a
+            >
+            <a
+              href="https://instagram.com/…"
+              class="contact__link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram Profil"
+              >Instagram</a
+            >
+            <a
+              href="https://linkedin.com/in/…"
+              class="contact__link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profil"
+              >LinkedIn</a
+            >
+            <a
+              href="https://github.com/…"
+              class="contact__link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profil"
+              >GitHub</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--Footer Bereich-->
+    <footer class="site-footer">
+      <div class="container">
+        <p class="site-footer__copy">
+          &copy; <span id="currentYear"></span> Andrin Leo Virisario / Alle
+          Rechte vorbehalten.
+        </p>
+        <a
+          href="#hero"
+          class="site-footer__back-to-top"
+          aria-label="Zurück nach oben"
+          >↑</a
+        >
+      </div>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
