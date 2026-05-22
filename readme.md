@@ -83,7 +83,7 @@ Modul293/
 ├── 📄 .gitignore
 ├── 📁 .vscode/
 │   ├── launch.json
-│   ├── settings.json
+│   └── settings.json
 ├── 📄 .prettierrc
 ├── 📄 README.md
 └── 📄 LICENSE
@@ -432,7 +432,7 @@ Modul293/
     <footer class="site-footer">
       <div class="container">
         <p class="site-footer__copy">
-          &copy; <span id="currentYear"></span> Andrin Leo Virisario / Alle
+          &copy; <span id="currentYear"></span> 2026 Andrin Leo Virisario / Alle
           Rechte vorbehalten.
         </p>
         <a
