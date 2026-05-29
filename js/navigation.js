@@ -25,14 +25,14 @@ function initBurgerMenu() {
   burger.addEventListener('click', () => {
     const isOpen = burger.getAttribute('aria-expanded') === 'true';
     burger.setAttribute('aria-expanded', String(!isOpen));
-    navLinks.classList.toggle('nav__links--open', !isOpen);
+    navLinks.classList.toggle('nav-active', !isOpen); // An CSS angepasst
     document.body.classList.toggle('menu-open', !isOpen);
   });
 
   navLinks.querySelectorAll('.nav__link').forEach((link) => {
     link.addEventListener('click', () => {
       burger.setAttribute('aria-expanded', 'false');
-      navLinks.classList.remove('nav__links--open');
+      navLinks.classList.remove('nav-active'); // An CSS angepasst
       document.body.classList.remove('menu-open');
     });
   });

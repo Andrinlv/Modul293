@@ -1,79 +1,48 @@
 :root {
-  /* Farben: Light Mode */
-  --color-bg: #ffffff;
-  --color-bg-alt: #f8f8f6;
-  --color-text: #1a1a1a;
-  --color-text-muted: #6b7280;
-  --color-primary: #2563eb;
-  --color-primary-hover: #1d4ed8;
-  --color-accent: #f59e0b;
-  --color-border: #e5e7eb;
-  --color-card-bg: #ffffff;
-  --color-overlay: rgba(0, 0, 0, 0.6);
+  /* Helles Theme (Standard) */
+  --color-bg: #f8fafc;
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  
+  /* Farben aus dem ALV-Logo */
+  --color-primary: #1493d4; /* Leuchtendes Cyan/Blau */
+  --color-primary-dark: #0b7bb5;
+  --color-secondary: #0b2341; /* Dunkelblau aus dem Rand */
+  
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+  --color-error: #ef4444;
+  --color-success: #10b981;
 
   /* Typografie */
-  --font-display: 'Playfair Display', Georgia, serif; /* Überschriften */
-  --font-body: 'Inter', system-ui, sans-serif; /* Fliesstext */
-  --font-mono: 'JetBrains Mono', monospace; /* Code */
-
-  --text-xs: 0.75rem; /*  12px */
-  --text-sm: 0.875rem; /*  14px */
-  --text-base: 1rem; /*  16px */
-  --text-lg: 1.125rem; /*  18px */
-  --text-xl: 1.25rem; /*  20px */
-  --text-2xl: 1.5rem; /*  24px */
-  --text-3xl: 1.875rem; /*  30px */
-  --text-4xl: 2.25rem; /*  36px */
-  --text-5xl: 3rem; /*  48px */
-  --text-6xl: 3.75rem; /*  60px */
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
 
   /* Abstände */
-  --space-1: 0.25rem; /*  4px */
-  --space-2: 0.5rem; /*  8px */
-  --space-3: 0.75rem; /* 12px */
-  --space-4: 1rem; /* 16px */
-  --space-6: 1.5rem; /* 24px */
-  --space-8: 2rem; /* 32px */
-  --space-12: 3rem; /* 48px */
-  --space-16: 4rem; /* 64px */
-  --space-24: 6rem; /* 96px */
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
 
-  /* Border Radius */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 1rem;
-  --radius-full: 9999px;
-
-  /* Schatten */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.14);
-
-  /* Übergänge */
-  --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
-  --transition-slow: 400ms ease;
-
-  /* Layout */
-  --container-max: 1200px;
-  --container-narrow: 720px;
-  --nav-height: 72px;
+  /* Layout & Effekte */
+  --radius: 6px;
+  --shadow: 0 4px 20px rgba(11, 35, 65, 0.08);
+  --shadow-hover: 0 10px 25px rgba(20, 147, 212, 0.2);
+  --transition: all 0.3s ease;
 }
 
-/* Dark Mode Variablen / überschreibt nur die geänderten Werte */
-[data-theme='dark'] {
-  --color-bg: #0f0f0f;
-  --color-bg-alt: #1a1a1a;
-  --color-text: #f0f0f0;
-  --color-text-muted: #9ca3af;
-  --color-border: #2d2d2d;
-  --color-card-bg: #1e1e1e;
+[data-theme="dark"] {
+  /* Dunkles Theme (Passt extrem gut zum Logo) */
+  --color-bg: #020617; /* Fast Schwarz/Tiefblau */
+  --color-text: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-surface: #0b2341; /* Logo Dunkelblau für Karten */
+  --color-border: #1e293b;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --shadow-hover: 0 10px 25px rgba(20, 147, 212, 0.3);
 }
 
-/*css reset*/
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -81,60 +50,35 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--nav-height);
-  font-size: 16px;
+  scroll-padding-top: 80px; /* Wegen fixed Header */
 }
 
 body {
-  font-family: var(--font-body);
-  font-size: var(--text-base);
-  color: var(--color-text);
+  font-family: var(--font-main);
   background-color: var(--color-bg);
-  line-height: 1.6;
-  transition: background-color var(--transition-base), color var(--transition-base);
-  overflow-x: hidden;
-}
-
-/*typografie*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-display);
-  line-height: 1.15;
-  font-weight: 700;
   color: var(--color-text);
+  line-height: 1.6;
+  transition: background-color var(--transition), color var(--transition);
 }
 
-h1 {
-  font-size: var(--text-5xl);
-}
-h2 {
-  font-size: var(--text-4xl);
-}
-h3 {
-  font-size: var(--text-2xl);
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  color: var(--color-text);
 }
 
 a {
   color: var(--color-primary);
   text-decoration: none;
-  transition: color var(--transition-fast);
-}
-a:hover {
-  color: var(--color-primary-hover);
+  transition: var(--transition);
 }
 
 img {
   max-width: 100%;
   height: auto;
   display: block;
-  border-radius: var(--radius-md);
 }
 
-ul,
-ol {
+ul[role="list"] {
   list-style: none;
 }

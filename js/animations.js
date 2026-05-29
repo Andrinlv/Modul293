@@ -5,8 +5,9 @@ export function initAnimations() {
   const prefersReduced = window.matchMedia(
     '(prefers-reduced-motion: reduce)'
   ).matches;
+  
   if (prefersReduced) {
-    elements.forEach((el) => el.classList.add('is-visible'));
+    elements.forEach((el) => el.classList.add('active'));
     return;
   }
 
@@ -14,7 +15,7 @@ export function initAnimations() {
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
+        entry.target.classList.add('active');
         observer.unobserve(entry.target);
       });
     },

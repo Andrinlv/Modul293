@@ -1,0 +1,48 @@
+@media (max-width: 992px) {
+  .section--hero .container,
+  .about__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .hero__actions {
+    justify-content: center;
+  }
+  
+  .hero__image {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav__burger {
+    display: block;
+  }
+  
+  .nav__links {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: var(--color-surface);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+  }
+  
+  /* Wird via JS getoggled: document.querySelector('.nav__links').classList.toggle('nav-active') */
+  .nav__links.nav-active {
+    left: 0;
+  }
+  
+  .section__title {
+    font-size: 2rem;
+  }
+  
+  .hero__title {
+    font-size: 2.5rem;
+  }
+}

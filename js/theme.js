@@ -8,7 +8,8 @@ export function initTheme() {
 
   const savedTheme = localStorage.getItem(THEME_KEY);
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const initialTheme = savedTheme ?? (prefersDark ? DARK_THEME : LIGHT_THEME);
+  // Standardmäßig Dark Theme nutzen, wenn nichts gespeichert ist
+  const initialTheme = savedTheme ?? (prefersDark ? DARK_THEME : DARK_THEME);
 
   applyTheme(initialTheme, toggleBtn);
 

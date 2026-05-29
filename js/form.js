@@ -24,7 +24,7 @@ export function initForm() {
 
     try {
 
-      // Option B: Eigene API / Formspree (eine Variante ist Formspree, sehr bekannt und einfach zu integrieren)
+      // Option : Eigene API / Formspree (eine Variante ist Formspree, sehr bekannt und einfach zu integrieren)
       const response = await fetch('https://formspree.io/f/...', {
         method: 'POST',
         headers: {

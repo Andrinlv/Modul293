@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Andrin Leo Virisario" />
+    <meta name="description" content="Portrait Website über Andrin Leo Virisario" />
     <meta name="author" content="Andrin Leo Virisario" />
 
     <meta property="og:title" content="Andrin Leo Virisario | Portfolio" />
@@ -12,7 +12,12 @@
     <meta property="og:type" content="website" />
 
     <title>Andrin Leo Virisario</title>
-    <link rel="icon" href="assets/images/icons/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="assets/images/icons/logo.png" />
 
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
@@ -22,11 +27,11 @@
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
 
-  <body data-theme="light">
+  <body data-theme="dark">
 
     <header class="site-header" id="site-header">
       <nav class="nav" aria-label="Hauptnavigation">
-        <a href="#hero" class="nav__logo">Menü</a>
+        <a href="#hero" class="nav__logo">ALV</a>
         <ul class="nav__links" role="list">
           <li><a href="#about" class="nav__link">Über mich</a></li>
           <li><a href="#skills" class="nav__link">Skills</a></li>
@@ -61,7 +66,7 @@
               Andrin Leo Virisario
             </h1>
             <p class="hero__subtitle reveal reveal--delay-2">
-              Was ich tue / Mein Beruf
+              Webentwickler & Technologie-Enthusiast
             </p>
             <div class="hero__actions reveal reveal--delay-3">
               <a href="#portfolio" class="btn btn--primary">Meine Arbeiten</a>
@@ -71,7 +76,7 @@
           <div class="hero__image reveal reveal--delay-2">
             <img
               src="assets/images/portrait/hero.jpg"
-              alt="Portrait von Mein Name"
+              alt="Portrait von Andrin Leo Virisario"
               loading="eager"
               width="480"
               height="560"
@@ -94,17 +99,16 @@
             <div class="about__image reveal">
               <img
                 src="assets/images/portrait/about.jpg"
-                alt="Ich bei der Arbeit"
+                alt="Andrin bei der Arbeit"
                 loading="lazy"
                 width="400"
                 height="500"
               />
             </div>
             <div class="about__text reveal reveal--delay-1">
-              <p class="about__lead">Kurze, prägnante Einleitung über mich.</p>
+              <p class="about__lead">Entwickler mit Leidenschaft für moderne Webtechnologien.</p>
               <p>
-                Längerer Beschreibungstext über mich, meine Werte und was mich
-                antreibt.
+                Ich baue interaktive, schnelle und ansprechende Benutzeroberflächen. Meine Arbeit zeichnet sich durch sauberen Code, modernes Design und einen starken Fokus auf die User Experience aus.
               </p>
               <ul class="about__facts" role="list">
                 <li class="about__fact">
@@ -133,14 +137,13 @@
             Was ich kann und womit ich arbeite
           </p>
           <div class="skills__grid">
-            <!-- Skill-Gruppe -->
             <article class="skill-card reveal">
-              <div class="skill-card__icon" aria-hidden="true">⚡</div>
+              <div class="skill-card__icon" aria-hidden="true">Programmierung</div>
               <h3 class="skill-card__title">Frontend</h3>
               <ul class="skill-card__tags" role="list">
-                <li class="tag">HTML</li>
-                <li class="tag">CSS</li>
-                <li class="tag">JavaScript</li>
+                <li class="tag">HTML5</li>
+                <li class="tag">CSS3 / SCSS</li>
+                <li class="tag">JavaScript (ES6+)</li>
               </ul>
             </article>
 
@@ -148,14 +151,14 @@
               <div class="skill-card__icon" aria-hidden="true">🛠️</div>
               <h3 class="skill-card__title">Tools</h3>
               <ul class="skill-card__tags" role="list">
-                <li class="tag">Git</li>
+                <li class="tag">Git & GitHub</li>
                 <li class="tag">Figma</li>
                 <li class="tag">VS Code</li>
               </ul>
             </article>
 
             <article class="skill-card reveal reveal--delay-2">
-              <div class="skill-card__icon" aria-hidden="true">🎯</div>
+              <div class="skill-card__icon" aria-hidden="true">Charaktereigenschaften</div>
               <h3 class="skill-card__title">Soft Skills</h3>
               <ul class="skill-card__tags" role="list">
                 <li class="tag">Kommunikation</li>
@@ -179,8 +182,8 @@
             <article class="project-card reveal">
               <div class="project-card__image">
                 <img
-                  src="assets/images/projects/project-1.jpg"
-                  alt="Projektname – Kurzbeschreibung"
+                  iframe-src="https://github.com/Andrinlv/Modul293.git"
+                  alt="Einlick des ersten Projekts"
                   loading="lazy"
                   width="600"
                   height="400"
@@ -203,9 +206,9 @@
                 </div>
               </div>
               <div class="project-card__body">
-                <h3 class="project-card__title">Projektname</h3>
+                <h3 class="project-card__title">Modul 293</h3>
                 <p class="project-card__desc">
-                  Kurze Beschreibung was dieses Projekt tut.
+                  Eine interaktive Portfolio- und Designwebsite.
                 </p>
                 <ul class="project-card__tags" role="list">
                   <li class="tag tag--accent">HTML</li>
@@ -214,7 +217,6 @@
                 </ul>
               </div>
             </article>
-
           </div>
         </div>
       </section>
@@ -254,7 +256,7 @@
                 name="email"
                 required
                 autocomplete="email"
-                placeholder="deine@email.ch"
+                placeholder="deine@email.com"
               />
               <span class="form-error" aria-live="polite"></span>
             </div>
@@ -286,13 +288,13 @@
 
           <div class="contact__links reveal">
             <a
-              href="mailto:meine@email.ch"
+              href="mailto:andrin@leovirisario.ch"
               class="contact__link"
               aria-label="E-Mail senden"
               >andrin@leovirisario.ch</a
             >
             <a
-              href="https://instagram.com/…"
+              href="https://instagram.com/andrinlv"
               class="contact__link"
               target="_blank"
               rel="noopener noreferrer"
@@ -300,7 +302,7 @@
               >Instagram</a
             >
             <a
-              href="https://linkedin.com/in/…"
+              href="https://linkedin.com/in/andrinlv"
               class="contact__link"
               target="_blank"
               rel="noopener noreferrer"
@@ -308,7 +310,7 @@
               >LinkedIn</a
             >
             <a
-              href="https://github.com/…"
+              href="https://github.com/andrinlv"
               class="contact__link"
               target="_blank"
               rel="noopener noreferrer"
@@ -320,12 +322,10 @@
       </section>
     </main>
 
-    <!--Footer Bereich-->
     <footer class="site-footer">
       <div class="container">
         <p class="site-footer__copy">
-          &copy; <span id="currentYear"></span> Andrin Leo Virisario / Alle
-          Rechte vorbehalten.
+          &copy; <span id="currentYear"></span> Andrin Leo Virisario / Alle Rechte vorbehalten.
         </p>
         <a
           href="#hero"
@@ -336,11 +336,6 @@
       </div>
     </footer>
 
-    <script src="js/utils.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/navigation.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/form.js"></script>
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
