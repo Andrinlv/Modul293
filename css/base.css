@@ -4,10 +4,10 @@
   --color-text: #0f172a;
   --color-text-muted: #475569;
   
-  /* Farben aus dem ALV-Logo */
+  /* Farben */
   --color-primary: #1493d4; /* Leuchtendes Cyan/Blau */
   --color-primary-dark: #0b7bb5;
-  --color-secondary: #0b2341; /* Dunkelblau aus dem Rand */
+  --color-secondary: #0b2341; /* Dunkelblau */
   
   --color-surface: #ffffff;
   --color-border: #e2e8f0;
@@ -31,12 +31,12 @@
   --transition: all 0.3s ease;
 }
 
-[data-theme="dark"] {
-  /* Dunkles Theme (Passt extrem gut zum Logo) */
-  --color-bg: #020617; /* Fast Schwarz/Tiefblau */
+[data-theme="dark"] { 
+  /* Dunkles Theme */
+  --color-bg: #020617; /* Schwarz/Tiefblau */
   --color-text: #f1f5f9;
   --color-text-muted: #94a3b8;
-  --color-surface: #0b2341; /* Logo Dunkelblau für Karten */
+  --color-surface: #0b2341; /* Dunkelblau für Karten */
   --color-border: #1e293b;
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   --shadow-hover: 0 10px 25px rgba(20, 147, 212, 0.3);

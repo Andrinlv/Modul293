@@ -4,8 +4,8 @@
   60% { transform: translate(-50%, 7px); }
 }
 
-/* * JS Logik: Dein JS (in animations.js) sollte den Elementen mit der Klasse .reveal 
- * eine weitere Klasse (z.B. .active) hinzufügen, sobald sie in den Viewport scrollen.
+/* * JS Logik: Das JS in animations.js sollte den Elementen mit der Klasse .reveal 
+ * eine weitere Klasse (z.B. .active) hinzufügen, sobald in den Viewport gescrolled wird.
  */
 .reveal {
   opacity: 0;

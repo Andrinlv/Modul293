@@ -8,7 +8,7 @@ export function initTheme() {
 
   const savedTheme = localStorage.getItem(THEME_KEY);
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  // Standardmäßig Dark Theme nutzen, wenn nichts gespeichert ist
+  // Standardmässig Dark Theme nutzen, wenn nichts gespeichert ist
   const initialTheme = savedTheme ?? (prefersDark ? DARK_THEME : DARK_THEME);
 
   applyTheme(initialTheme, toggleBtn);
@@ -23,7 +23,7 @@ export function initTheme() {
 
 function applyTheme(theme, toggleBtn) {
   document.body.setAttribute('data-theme', theme);
-  toggleBtn.textContent = theme === DARK_THEME ? '☀️' : '🌙';
+  toggleBtn.textContent = theme === DARK_THEME ? '★' : '☾';
   toggleBtn.setAttribute(
     'aria-label',
     theme === DARK_THEME ? 'Light Mode aktivieren' : 'Dark Mode aktivieren'
