@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portrait Website über Andrin Leo Virisario" />
+    <meta
+      name="description"
+      content="Portrait Website über Andrin Leo Virisario"
+    />
     <meta name="author" content="Andrin Leo Virisario" />
 
     <meta property="og:title" content="Andrin Leo Virisario | Portfolio" />
@@ -13,9 +16,12 @@
 
     <title>Andrin Leo Virisario</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="icon" href="assets/images/icons/logo.png" />
 
@@ -28,7 +34,6 @@
   </head>
 
   <body data-theme="dark">
-
     <header class="site-header" id="site-header">
       <nav class="nav" aria-label="Hauptnavigation">
         <a href="#hero" class="nav__logo">ALV</a>
@@ -57,7 +62,6 @@
     </header>
 
     <main id="main-content">
-
       <section class="section section--hero" id="hero" aria-label="Willkommen!">
         <div class="container">
           <div class="hero__content">
@@ -106,9 +110,14 @@
               />
             </div>
             <div class="about__text reveal reveal--delay-1">
-              <p class="about__lead">Entwickler mit Leidenschaft für moderne Webtechnologien.</p>
+              <p class="about__lead">
+                Entwickler mit Leidenschaft für moderne Webtechnologien.
+              </p>
               <p>
-                Ich baue interaktive, schnelle und ansprechende Benutzeroberflächen. Meine Arbeit zeichnet sich durch sauberen Code, modernes Design und einen starken Fokus auf die User Experience aus.
+                Ich baue interaktive, schnelle und ansprechende
+                Benutzeroberflächen. Meine Arbeit zeichnet sich durch sauberen
+                Code, modernes Design und einen starken Fokus auf die User
+                Experience aus.
               </p>
               <ul class="about__facts" role="list">
                 <li class="about__fact">
@@ -143,7 +152,16 @@
               <ul class="skill-card__tags" role="list">
                 <li class="tag">HTML5</li>
                 <li class="tag">CSS3 / SCSS</li>
-                <li class="tag">JavaScript (ES6+)</li>
+                <li class="tag">js</li>
+              </ul>
+
+              <h3 class="skill-card__title">Backend</h3>
+              <ul class="skill-card__tags" role="list">
+                <li class="tag">Node.js</li>
+                <li class="tag">Java</li>
+                <li class="tag">C#</li>
+                <li class="tag">SQL</li>
+                <li class="tag">PHP</li>
               </ul>
             </article>
 
@@ -170,95 +188,108 @@
         </div>
       </section>
 
-      <section class="section section--portfolio" id="portfolio" aria-label="Meine Projekte">
-  <div class="container">
-    <h2 class="section__title reveal">Portfolio</h2>
-    <p class="section__subtitle reveal">Ausgewählte Projekte</p>
-    
-    <div class="portfolio__grid">
-      
-      <article class="project-card reveal">
-        <div class="project-card__image">
-          <img
-            src="assets/images/projects/project1.png"
-            alt="Einblick des ersten Projekts"
-            loading="lazy"
-            width="600"
-            height="400"
-          />
-          <div class="project-card__overlay">
-            <a
-              href="https://www.jugendrat-bl.ch"
-              class="btn btn--outline btn--small"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Live ansehen</a
-            >
-            <a
-              href="https://github.com/dein-benutzername/projekt-repo"
-              class="btn btn--ghost btn--small"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub</a
-            >
+      <section
+        class="section section--portfolio"
+        id="portfolio"
+        aria-label="Meine Projekte"
+      >
+        <div class="container">
+          <h2 class="section__title reveal">Portfolio</h2>
+          <p class="section__subtitle reveal">Ausgewählte Projekte</p>
+
+          <div class="portfolio__grid">
+            <article class="project-card reveal">
+              <div class="project-card__image">
+                <video
+                  src="assets/images/projects/project1.mp4"
+                  alt="Einblick des ersten Projekts"
+                  loading="lazy"
+                  width="710"
+                  height="400"
+                  autoplay
+                  loop
+                  muted
+                ></video>
+                <div class="project-card__overlay">
+                  <a
+                    href="https://www.jugendrat-bl.ch"
+                    class="btn btn--outline btn--small"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live ansehen</a
+                  >
+                  <a
+                    href="https://github.com/dein-benutzername/projekt-repo"
+                    class="btn btn--ghost btn--small"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">
+                  Website des Jugendrats Baselland
+                </h3>
+                <p class="project-card__desc">
+                  Entwicklung einer modernen Website für den Jugendrat
+                  Baselland.
+                </p>
+                <ul class="project-card__tags" role="list">
+                  <li class="tag tag--accent">HTML</li>
+                  <li class="tag tag--accent">CSS</li>
+                  <li class="tag tag--accent">JS</li>
+                  <li class="tag tag--accent">PHP</li>
+                  <li class="tag tag--accent">Grafikdesign</li>
+                  <li class="tag tag--accent">XML</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-card__image">
+                <video
+                  src="assets/images/projects/project2.mp4"
+                  alt="Einblick des zweiten Projekts"
+                  loading="lazy"
+                  width="710"
+                  height="400"
+                  autoplay
+                  loop
+                  muted
+                ></video>
+                <div class="project-card__overlay">
+                  <a
+                    href="#"
+                    class="btn btn--outline btn--small"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live ansehen</a
+                  >
+                  <a
+                    href="#"
+                    class="btn btn--ghost btn--small"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Modul 293</h3>
+                <p class="project-card__desc">
+                  Eine interaktive Portfolio- und Designwebsite.
+                </p>
+                <ul class="project-card__tags" role="list">
+                  <li class="tag tag--accent">HTML</li>
+                  <li class="tag tag--accent">CSS</li>
+                  <li class="tag tag--accent">JS</li>
+                </ul>
+              </div>
+            </article>
           </div>
         </div>
-        <div class="project-card__body">
-          <h3 class="project-card__title">Website des Jugendrats Baselland</h3>
-          <p class="project-card__desc">
-            Entwicklung einer modernen Website für den Jugendrat Baselland.
-          </p>
-          <ul class="project-card__tags" role="list">
-            <li class="tag tag--accent">HTML</li>
-            <li class="tag tag--accent">CSS</li>
-            <li class="tag tag--accent">JS</li>
-            <li class="tag tag--accent">PHP</li>
-            <li class="tag tag--accent">Grafikdesign</li>
-            <li class="tag tag--accent">XML</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-card__image">
-          <img
-            src="assets/images/projects/project2.png"
-            alt="Einblick des zweiten Projekts"
-            loading="lazy"
-            width="600"
-            height="400"
-          />
-          <div class="project-card__overlay">
-            <a
-              href="#"
-              class="btn btn--outline btn--small"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Live ansehen</a
-            >
-            <a
-              href="#"
-              class="btn btn--ghost btn--small"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub</a
-            >
-          </div>
-        </div>
-        <div class="project-card__body">
-          <h3 class="project-card__title">Modul 293</h3>
-          <p class="project-card__desc">
-            Eine interaktive Portfolio- und Designwebsite.
-          </p>
-          <ul class="project-card__tags" role="list">
-            <li class="tag tag--accent">HTML</li>
-            <li class="tag tag--accent">CSS</li>
-            <li class="tag tag--accent">JS</li>
-          </ul>
-        </div>
-      </article>
-
-    </div> </div> </section>
+      </section>
 
       <section
         class="section section--contact"
@@ -364,7 +395,8 @@
     <footer class="site-footer">
       <div class="container">
         <p class="site-footer__copy">
-          &copy; <span id="currentYear"></span> Andrin Leo Virisario / Alle Rechte vorbehalten.
+          &copy; <span id="currentYear"></span> Andrin Leo Virisario / Alle
+          Rechte vorbehalten.
         </p>
         <a
           href="#hero"
