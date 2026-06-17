@@ -24,17 +24,14 @@ export function initForm() {
 
     try {
       // Option : Eigene API / Formspree (eine Variante ist Formspree, sehr bekannt und einfach zu integrieren)
-      const response = await fetch(
-        'https://gibm.becknet.ch/formular/formular.php',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-          },
-          body: JSON.stringify(Object.fromEntries(new FormData(form))),
-        }
-      );
+      const response = await fetch('https://formspree.io/f/mqeoozrb', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(Object.fromEntries(new FormData(form))),
+      });
 
       if (!response.ok) throw new Error('Server-Fehler');
 
