@@ -23,8 +23,13 @@
   transition: background-color var(--transition);
 }
 
-[data-theme="dark"] .site-header {
-  background: rgba(2, 6, 23, 0.85); /* Hardcoded für besseren Blur im Darkmode */
+[data-theme='dark'] .site-header {
+  background: rgba(
+    2,
+    6,
+    23,
+    0.85
+  ); /* Hardcoded für besseren Blur im Darkmode */
 }
 
 .nav {

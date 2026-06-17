@@ -22,6 +22,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
     <link rel="icon" href="assets/images/icons/logo.png" />
 
@@ -31,9 +35,24 @@
     <link rel="stylesheet" href="css/sections.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/music.css" />
   </head>
 
   <body data-theme="dark">
+    <audio id="bg-music"></audio>
+
+    <div id="music-popup-overlay">
+      <div id="music-popup-box">
+        <h3>🎵 Hintergrundmusik aktivieren?</h3>
+        <p>
+          Diese Website verwendet Hintergrundmusik für ein besseres Erlebnis.
+          Möchten Sie den Ton einschalten?
+        </p>
+        <button id="music-allow-btn">Ja</button>
+        <button id="music-deny-btn">Nein</button>
+      </div>
+    </div>
+
     <header class="site-header" id="site-header">
       <nav class="nav" aria-label="Hauptnavigation">
         <a href="#hero" class="nav__logo">ALV</a>
@@ -79,7 +98,7 @@
           </div>
           <div class="hero__image reveal reveal--delay-2">
             <img
-              src="assets/images/portrait/hero.png"
+              src="assets/images/portrait/hero.jpg"
               alt="Portrait von Andrin Leo Virisario"
               loading="eager"
               width="480"
@@ -202,14 +221,14 @@
               <div class="project-card__image">
                 <video
                   src="assets/images/projects/project1.mp4"
-                  alt="Einblick des ersten Projekts"
-                  loading="lazy"
                   width="710"
                   height="400"
                   autoplay
                   loop
                   muted
-                ></video>
+                >
+                  Video wird von deinem Browser nicht unterstützt.
+                </video>
                 <div class="project-card__overlay">
                   <a
                     href="https://www.jugendrat-bl.ch"
@@ -250,14 +269,14 @@
               <div class="project-card__image">
                 <video
                   src="assets/images/projects/project2.mp4"
-                  alt="Einblick des zweiten Projekts"
-                  loading="lazy"
                   width="710"
                   height="400"
                   autoplay
                   loop
                   muted
-                ></video>
+                >
+                  Video wird von deinem Browser nicht unterstützt.
+                </video>
                 <div class="project-card__overlay">
                   <a
                     href="#"
@@ -356,37 +375,17 @@
             </p>
           </form>
 
-          <div class="contact__links reveal">
-            <a
-              href="mailto:andrin@leovirisario.ch"
-              class="contact__link"
-              aria-label="E-Mail senden"
-              >andrin@leovirisario.ch</a
-            >
-            <a
-              href="https://instagram.com/andrinlv"
-              class="contact__link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram Profil"
-              >Instagram</a
-            >
-            <a
-              href="https://linkedin.com/in/andrinlv"
-              class="contact__link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn Profil"
-              >LinkedIn</a
-            >
-            <a
-              href="https://github.com/andrinlv"
-              class="contact__link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub Profil"
-              >GitHub</a
-            >
+          <div>
+            <p class="section__subtitle reveal">Wo du mich findest</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2694.7581923251864!2d7.696199799999995!3d47.51410020000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4791b61a42df7e67%3A0xc862a9d4ee509848!2sAm%20Ch%C3%A4ferberg%2015%2C%204133%20Pratteln!5e0!3m2!1sde!2sch!4v1781686078816!5m2!1sde!2sch"
+              height="300"
+              style="border: 0; width: 100%"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Google Maps Standort von Andrin Leo Virisario"
+            ></iframe>
           </div>
         </div>
       </section>
@@ -394,6 +393,43 @@
 
     <footer class="site-footer">
       <div class="container">
+        <div class="contact__links reveal">
+          <a
+            href="mailto:andrin@leovirisario.ch"
+            class="contact__link"
+            aria-label="E-Mail senden"
+          >
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a
+            href="https://instagram.com/andrinlv"
+            class="contact__link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/andrinlv"
+            class="contact__link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/andrinlv"
+            class="contact__link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+
         <p class="site-footer__copy">
           &copy; <span id="currentYear"></span> Andrin Leo Virisario / Alle
           Rechte vorbehalten.
@@ -402,8 +438,9 @@
           href="#hero"
           class="site-footer__back-to-top"
           aria-label="Zurück nach oben"
-          >↑</a
         >
+          <i class="fas fa-arrow-up"></i>
+        </a>
       </div>
     </footer>
 
