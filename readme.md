@@ -60,12 +60,19 @@ Modul293/
 |   │   ├── K1 - K10                ← Meine Screenshots zu jeder Kompetenz
 |   │   └── optionale Ressourcen (z.B. Inspirationen)
 |   │
+|   ├── 📁 music/
+|   |   ├── song1.mp3
+│   │   ├── song2.mp3
+|   |   ├── song3.mp3
+│   │   └── song4.mp3
+|   |
 │   └── 📁 fonts/                   ← Selbst gehostete Schriften (Zeit abhängig)
 │       ├── MyFont-Regular.woff2
 │       └── MyFont-Bold.woff2
 │
 ├── 📁 css/
 │   ├── base.css                   ← Reset, Variablen, Typografie
+│   ├── music.css                  ← Block-Box, Banner, Accessibility Easy
 │   ├── layout.css                 ← Grid, Sections, Container
 │   ├── components.css             ← Buttons, Cards, Tags, Badges
 │   ├── sections.css               ← Hero, About, Skills, Portfolio…
@@ -74,6 +81,7 @@ Modul293/
 │
 ├── 📁 js/
 │   ├── main.js                    ← Einstiegspunkt, initialisiert alles
+│   ├── music.js                   ← Playlist Funktion, Auto-Play
 │   ├── navigation.js              ← Smooth Scroll, Active-State
 │   ├── animations.js              ← Scroll-Reveal, Intersection Observer
 │   ├── theme.js                   ← Dark/Light Mode Toggle
