@@ -318,7 +318,8 @@
         <div class="container container--narrow">
           <h2 class="section__title reveal">Kontakt</h2>
           <p class="section__subtitle reveal">
-            Ich freue mich über deine Nachricht
+            Ich freue mich über deine Nachricht!<br />
+            Die mit * markierten Felder sind Pflichtfelder
           </p>
 
           <form class="contact-form reveal" id="contactForm" novalidate>
@@ -442,6 +443,7 @@
               id="address"
               name="address"
               placeholder="Deine Adresse (z.B. Bahnhofstrasse 1, Basel)"
+              pattern="^[a-zA-Z0-9äöüÄÖÜß\s,.'-]+$"
             />
           </div>
 
