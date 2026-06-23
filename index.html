@@ -67,7 +67,7 @@
           aria-label="Theme wechseln"
           id="themeToggle"
         >
-          🌙
+          ☾
         </button>
         <button
           class="nav__burger"
@@ -323,15 +323,53 @@
 
           <form class="contact-form reveal" id="contactForm" novalidate>
             <div class="form-group">
+              <label class="form-label" for="date">Datum</label>
+              <input
+                class="form-input"
+                type="date"
+                id="date"
+                name="date"
+                aria-current="date"
+              />
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="sex">Geschlecht *</label>
+              <select class="form-input" id="sex" name="sex" required>
+                <option value="" disabled selected>Bitte wählen</option>
+                <option value="male">Männlich</option>
+                <option value="female">Weiblich</option>
+                <option value="other">Divers</option>
+              </select>
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
               <label class="form-label" for="name">Name *</label>
               <input
                 class="form-input"
                 type="text"
                 id="name"
                 name="name"
-                required
                 autocomplete="name"
                 placeholder="Dein Name"
+                required
+              />
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="age">Alter *</label>
+              <input
+                class="form-input"
+                type="number"
+                id="age"
+                name="age"
+                min="0"
+                max="120"
+                placeholder="Dein Alter"
+                required
               />
               <span class="form-error" aria-live="polite"></span>
             </div>
@@ -343,10 +381,39 @@
                 type="email"
                 id="email"
                 name="email"
-                required
                 autocomplete="email"
                 placeholder="deine@email.com"
+                required
               />
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="phone">Telefon *</label>
+
+              <div class="phone-input-group">
+                <select
+                  class="form-input form-input--country"
+                  id="country"
+                  name="country"
+                >
+                  <option value="CH">CH (+41)</option>
+                  <option value="DE">DE (+49)</option>
+                  <option value="AT">AT (+43)</option>
+                  <option value="US">US (+1)</option>
+                  <option value="OTHER">...</option>
+                </select>
+
+                <input
+                  class="form-input form-input--tel"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="079 123 45 67"
+                  required
+                />
+              </div>
+
               <span class="form-error" aria-live="polite"></span>
             </div>
 
@@ -356,11 +423,39 @@
                 class="form-input form-input--textarea"
                 id="message"
                 name="message"
-                required
                 rows="5"
                 placeholder="Was möchtest du mir mitteilen?"
+                required
               ></textarea>
               <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+            <label class="form-label" for="address">Adresse</label>
+            <div style="margin-bottom: 8px;">
+              <input type="checkbox" id="addressCheckbox" name="addressCheckbox" />
+              <label for="addressCheckbox">Adresse auf Karte anzeigen</label>
+            </div>
+            <input
+              class="form-input"
+              type="text"
+              id="address"
+              name="address"
+              placeholder="Deine Adresse (z.B. Bahnhofstrasse 1, Basel)"
+            />
+          </div>
+
+            <div class="form-group">
+              <div class="map-card">
+                <iframe
+                  id="mapIframe"
+                  src="https://maps.google.com/maps?q=Schweiz&output=embed"
+                  allowfullscreen
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Google Maps Standort"
+                ></iframe>
+              </div>
             </div>
 
             <button
@@ -374,20 +469,6 @@
               Danke! Ich melde mich bald.
             </p>
           </form>
-
-          <div>
-            <p class="section__subtitle reveal">Wo du mich findest</p>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2694.7581923251864!2d7.696199799999995!3d47.51410020000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4791b61a42df7e67%3A0xc862a9d4ee509848!2sAm%20Ch%C3%A4ferberg%2015%2C%204133%20Pratteln!5e0!3m2!1sde!2sch!4v1781686078816!5m2!1sde!2sch"
-              height="300"
-              style="border: 0; width: 100%"
-              allowfullscreen
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Google Maps Standort von Andrin Leo Virisario"
-            ></iframe>
-          </div>
-        </div>
       </section>
     </main>
 

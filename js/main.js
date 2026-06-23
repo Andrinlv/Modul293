@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initAnimations();
   initForm();
 
+  const dateEl = document.getElementById('date');
+  if (dateEl) {
+    dateEl.value = new Date().toISOString().split('T')[0];
+  }
+
   const yearEl = document.getElementById('currentYear');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
