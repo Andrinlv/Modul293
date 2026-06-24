@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://andrinlv.github.io/Modul293/sitemap.xml

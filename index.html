@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="theme-color" content="#020617" />
+
     <meta
       name="description"
       content="Portrait Website über Andrin Leo Virisario"
@@ -11,10 +14,14 @@
 
     <meta property="og:title" content="Andrin Leo Virisario | Portfolio" />
     <meta property="og:description" content="Die Maschine aus der Schweiz!" />
-    <meta property="og:image" content="assets/images/icons/og-image.jpg" />
+    <meta property="og:image" content="https://andrinlv.github.io/Modul293/images/icons/og-image.jpg" />
     <meta property="og:type" content="website" />
 
-    <title>Andrin Leo Virisario</title>
+    <title>Andrin Leo Virisario | Portfolio</title>
+
+    <link rel="manifest" href="manifest.json" />
+
+    <link rel="canonical" href="https://andrinlv.github.io/Modul293/" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +34,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <link rel="icon" href="assets/images/icons/logo.png" />
+    <link rel="icon" href="assets/images/icons/favicon.ico" />
 
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
@@ -36,6 +43,23 @@
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/music.css" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Andrin Leo Virisario",
+      "url": "https://andrinlv.github.io/Modul293/",
+      "image": "https://andrinlv.github.io/Modul293/images/icons/og-image.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/andrinlv/",
+        "https://www.instagram.com/andrinlv/",
+        "https://github.com/andrinlv"
+      ]
+    }
+
+</script>
+
   </head>
 
   <body data-theme="dark">
@@ -226,6 +250,8 @@
                   autoplay
                   loop
                   muted
+                  preload="none"
+                  poster="assets/images/projects/project1-poster.jpg"
                 >
                   Video wird von deinem Browser nicht unterstützt.
                 </video>
@@ -238,7 +264,7 @@
                     >Live ansehen</a
                   >
                   <a
-                    href="https://github.com/dein-benutzername/projekt-repo"
+                    href="https://github.com/andrinlv/projekt-repo"
                     class="btn btn--ghost btn--small"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -274,6 +300,8 @@
                   autoplay
                   loop
                   muted
+                  preload="none"
+                  poster="assets/images/projects/project2-poster.jpg"
                 >
                   Video wird von deinem Browser nicht unterstützt.
                 </video>
@@ -322,7 +350,7 @@
             Die mit * markierten Felder sind Pflichtfelder
           </p>
 
-          <form class="contact-form reveal" id="contactForm" novalidate>
+          <form class="contact-form reveal" id="contactForm">
             <div class="form-group">
               <label class="form-label" for="date">Datum</label>
               <input
@@ -330,7 +358,6 @@
                 type="date"
                 id="date"
                 name="date"
-                aria-current="date"
               />
               <span class="form-error" aria-live="polite"></span>
             </div>
@@ -394,6 +421,7 @@
 
               <div class="phone-input-group">
                 <select
+                  aria-label="Ländervorwahl"
                   class="form-input form-input--country"
                   id="country"
                   name="country"
@@ -445,31 +473,31 @@
               placeholder="Deine Adresse (z.B. Bahnhofstrasse 1, Basel)"
               pattern="^[a-zA-Z0-9äöüÄÖÜß\s,.'-]+$"
             />
-          </div>
-
-            <div class="form-group">
-              <div class="map-card">
-                <iframe
-                  id="mapIframe"
-                  src="https://maps.google.com/maps?q=Schweiz&output=embed"
-                  allowfullscreen
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  title="Google Maps Standort"
-                ></iframe>
-              </div>
             </div>
 
-            <button
-              class="btn btn--primary btn--full"
-              type="submit"
-              id="submitBtn"
-            >
-              Nachricht senden
-            </button>
-            <p class="form-success" id="formSuccess" aria-live="polite" hidden>
-              Danke! Ich melde mich bald.
-            </p>
+              <div class="form-group">
+                <div class="map-card">
+                  <iframe
+                    id="mapIframe"
+                    src="https://maps.google.com/maps?q=Basel,%20Schweiz&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Google Maps Standort"
+                  ></iframe>
+                </div>
+              </div>
+
+              <button
+                class="btn btn--primary btn--full"
+                type="submit"
+                id="submitBtn"
+              >
+                Nachricht senden
+              </button>
+              <p class="form-success" id="formSuccess" aria-live="polite" hidden>
+                Danke! Ich melde mich bald.
+              </p>
           </form>
       </section>
     </main>
@@ -514,7 +542,7 @@
         </div>
 
         <p class="site-footer__copy">
-          &copy; <span id="currentYear"></span> Andrin Leo Virisario / Alle
+          © <span id="currentYear"></span> Andrin Leo Virisario / Alle
           Rechte vorbehalten.
         </p>
         <a

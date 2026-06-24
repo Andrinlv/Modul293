@@ -3,12 +3,12 @@
   --color-bg: #f8fafc;
   --color-text: #0f172a;
   --color-text-muted: #475569;
-  
+
   /* Farben */
   --color-primary: #1493d4; /* Leuchtendes Cyan/Blau */
   --color-primary-dark: #0b7bb5;
   --color-secondary: #0b2341; /* Dunkelblau */
-  
+
   --color-surface: #ffffff;
   --color-border: #e2e8f0;
   --color-error: #ef4444;
@@ -31,7 +31,7 @@
   --transition: all 0.3s ease;
 }
 
-[data-theme="dark"] { 
+[data-theme='dark'] {
   /* Dunkles Theme */
   --color-bg: #020617; /* Schwarz/Tiefblau */
   --color-text: #f1f5f9;
@@ -61,7 +61,10 @@ body {
   transition: background-color var(--transition), color var(--transition);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-heading);
   line-height: 1.2;
   color: var(--color-text);
@@ -79,6 +82,6 @@ img {
   display: block;
 }
 
-ul[role="list"] {
+ul[role='list'] {
   list-style: none;
 }
