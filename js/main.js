@@ -20,4 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   console.log('Portfolio geladen.');
+//in Porduktion unnötig, kann entfernt werden/ habe es vorerst gealssen, da es auf Github Pages ist.
 });
